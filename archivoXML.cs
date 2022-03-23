@@ -9,11 +9,11 @@ namespace Diccionario_Personal
 {
     class archivoXML
     {
-        private string url;
-        public string Direction
+        private string path;
+        public string FilePath
         {
-            get { return url; }
-            set { url = value; }
+            get { return path; }
+            set { path = value; }
         }
         
 
@@ -29,7 +29,17 @@ namespace Diccionario_Personal
          * ???? Sigo pensando en crear un archivo xml para cada idioma, o uno solo donde 
          *      el cuerpo sea <Diccionario> y se divida por <Idioma> y esta en <Palabra>
          */
+        public void createXML()
+        {
+            XmlDocument doc = new XmlDocument();
 
+            XmlDeclaration init = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
+            XmlElement root = doc.DocumentElement;
+            doc.InsertBefore(init, root);
+            
+            doc.Save("C:\archivo.xml");//error aqui
+        }
+        
         public void creatingXML(XmlDocument doc)
         {
 

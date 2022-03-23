@@ -21,13 +21,18 @@ namespace Diccionario_Personal
             //Application.Run(new FormMain());
             test();
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            archivoXML arc = new archivoXML();
 
             string url = "C:\archivo.xml";
             OpenFileDialog openFile = initDirectoryFile();
             if (File.Exists(url))
                 Console.WriteLine("yes");
             else
-                openFile.ShowDialog();
+            {
+                //openFile.ShowDialog();
+                arc.createXML();
+            }
+                
 
         }
         static private OpenFileDialog initDirectoryFile()
