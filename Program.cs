@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Diccionario_Personal
 {
     static class Program
@@ -17,6 +18,7 @@ namespace Diccionario_Personal
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());
+            
         }
     }
 }

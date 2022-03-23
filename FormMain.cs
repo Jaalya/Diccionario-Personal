@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Diccionario_Personal
 {
@@ -15,6 +16,22 @@ namespace Diccionario_Personal
         public FormMain()
         {
             InitializeComponent();
+            
         }
+        XmlDocument doc = new XmlDocument();
+
+        private void bttnGuardar_Click(object sender, EventArgs e)
+        {
+
+            /*try
+            {
+
+            }
+            catch
+            {
+
+            }*/
+        }
+
     }
 }
