@@ -7,12 +7,16 @@ using System.Xml;
 
 namespace Diccionario_Personal
 {
-<<<<<<< HEAD
-    public class archivoXML
-=======
     class archivoXML
->>>>>>> ramaXML
     {
+        private string url;
+        public string Direction
+        {
+            get { return url; }
+            set { url = value; }
+        }
+
+
         /*La estructura del archivo xml es:
          * Idioma
          *  | Palabra
@@ -25,6 +29,7 @@ namespace Diccionario_Personal
          * ???? Sigo pensando en crear un archivo xml para cada idioma, o uno solo donde 
          *      el cuerpo sea <Diccionario> y se divida por <Idioma> y esta en <Palabra>
          */
+
         public void creatingXML(XmlDocument doc)
         {
 
@@ -57,9 +62,10 @@ namespace Diccionario_Personal
             doc.Save("");
 
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> ramaXML
+        public void insertNivel1(string nivel1)
+        {
+            XmlElement element = doc.CreateElement(String.Empty, "nivel1", string.Empty);
+            doc.AppendChild(element);
+        }
     }
 }
