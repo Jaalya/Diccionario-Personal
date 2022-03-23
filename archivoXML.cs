@@ -15,7 +15,7 @@ namespace Diccionario_Personal
             get { return url; }
             set { url = value; }
         }
-
+        
 
         /*La estructura del archivo xml es:
          * Idioma
@@ -62,10 +62,10 @@ namespace Diccionario_Personal
             doc.Save("");
 
         }
-        public void insertNivel1(string nivel1)
+        /*public void insertNivel1(string nivel1)
         {
             XmlElement element = doc.CreateElement(String.Empty, "nivel1", string.Empty);
             doc.AppendChild(element);
-        }
+        }*/
     }
 }

@@ -34,6 +34,10 @@ namespace Diccionario_Personal
             this.tbxPalabra = new System.Windows.Forms.TextBox();
             this.tbxTraduccion = new System.Windows.Forms.TextBox();
             this.gbInsertar = new System.Windows.Forms.GroupBox();
+            this.lbl_Idioma = new System.Windows.Forms.Label();
+            this.cbxTipo = new System.Windows.Forms.ComboBox();
+            this.cbxIdioma = new System.Windows.Forms.ComboBox();
+            this.lblTipo = new System.Windows.Forms.Label();
             this.rtbIdea = new System.Windows.Forms.RichTextBox();
             this.lbl_Idea = new System.Windows.Forms.Label();
             this.lblTraduccion = new System.Windows.Forms.Label();
@@ -46,10 +50,6 @@ namespace Diccionario_Personal
             this.preferenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cbxIdioma = new System.Windows.Forms.ComboBox();
-            this.lbl_Idioma = new System.Windows.Forms.Label();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).BeginInit();
@@ -111,6 +111,46 @@ namespace Diccionario_Personal
             this.gbInsertar.Size = new System.Drawing.Size(173, 355);
             this.gbInsertar.TabIndex = 7;
             this.gbInsertar.TabStop = false;
+            // 
+            // lbl_Idioma
+            // 
+            this.lbl_Idioma.AutoSize = true;
+            this.lbl_Idioma.Location = new System.Drawing.Point(10, 18);
+            this.lbl_Idioma.Name = "lbl_Idioma";
+            this.lbl_Idioma.Size = new System.Drawing.Size(50, 14);
+            this.lbl_Idioma.TabIndex = 9;
+            this.lbl_Idioma.Text = "Idioma";
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Items.AddRange(new object[] {
+            "Sustantivo",
+            "Verbo",
+            "Pronombre"});
+            this.cbxTipo.Location = new System.Drawing.Point(13, 80);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(132, 22);
+            this.cbxTipo.TabIndex = 10;
+            // 
+            // cbxIdioma
+            // 
+            this.cbxIdioma.FormattingEnabled = true;
+            this.cbxIdioma.Items.AddRange(new object[] {
+            "Ingles - Español"});
+            this.cbxIdioma.Location = new System.Drawing.Point(13, 38);
+            this.cbxIdioma.Name = "cbxIdioma";
+            this.cbxIdioma.Size = new System.Drawing.Size(132, 22);
+            this.cbxIdioma.TabIndex = 9;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(13, 63);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(33, 14);
+            this.lblTipo.TabIndex = 10;
+            this.lblTipo.Text = "Tipo";
             // 
             // rtbIdea
             // 
@@ -179,6 +219,7 @@ namespace Diccionario_Personal
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // verToolStripMenuItem
             // 
@@ -206,46 +247,6 @@ namespace Diccionario_Personal
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // cbxIdioma
-            // 
-            this.cbxIdioma.FormattingEnabled = true;
-            this.cbxIdioma.Items.AddRange(new object[] {
-            "Ingles - Español"});
-            this.cbxIdioma.Location = new System.Drawing.Point(13, 38);
-            this.cbxIdioma.Name = "cbxIdioma";
-            this.cbxIdioma.Size = new System.Drawing.Size(132, 22);
-            this.cbxIdioma.TabIndex = 9;
-            // 
-            // lbl_Idioma
-            // 
-            this.lbl_Idioma.AutoSize = true;
-            this.lbl_Idioma.Location = new System.Drawing.Point(10, 18);
-            this.lbl_Idioma.Name = "lbl_Idioma";
-            this.lbl_Idioma.Size = new System.Drawing.Size(50, 14);
-            this.lbl_Idioma.TabIndex = 9;
-            this.lbl_Idioma.Text = "Idioma";
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(13, 63);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(33, 14);
-            this.lblTipo.TabIndex = 10;
-            this.lblTipo.Text = "Tipo";
-            // 
-            // cbxTipo
-            // 
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Items.AddRange(new object[] {
-            "Sustantivo",
-            "Verbo",
-            "Pronombre"});
-            this.cbxTipo.Location = new System.Drawing.Point(13, 80);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(132, 22);
-            this.cbxTipo.TabIndex = 10;
             // 
             // button1
             // 
