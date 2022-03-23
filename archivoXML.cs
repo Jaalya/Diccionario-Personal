@@ -7,7 +7,11 @@ using System.Xml;
 
 namespace Diccionario_Personal
 {
+<<<<<<< HEAD
     public class archivoXML
+=======
+    class archivoXML
+>>>>>>> ramaXML
     {
         /*La estructura del archivo xml es:
          * Idioma
@@ -53,6 +57,9 @@ namespace Diccionario_Personal
             doc.Save("");
 
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ramaXML
     }
 }
